@@ -1,0 +1,20 @@
+name: Check knowledge pack
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate and package
+        run: python scripts/build.py --output "$RUNNER_TEMP/open-reverselab-knowledge.kbpack.zip"
+      - name: Check packaged content
+        run: python scripts/extension_protocol.py check "$RUNNER_TEMP/open-reverselab-knowledge.kbpack.zip"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: open-reverselab-knowledge
+          path: ${{ runner.temp }}/open-reverselab-knowledge.kbpack.zip
