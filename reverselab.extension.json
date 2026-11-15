@@ -401,5 +401,5 @@
   "protocol": "open-reverselab.extension/v1",
   "requires": [],
   "title": "Open ReverseLab knowledge",
-  "version": "1.0.1"
+  "version": "1.0.2"
 }

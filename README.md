@@ -14,6 +14,12 @@ https://github.com/LING71671/open-reverselab-knowledge
 
 Read the source and install **Open ReverseLab knowledge**. You can also import this repository's downloaded source ZIP or a built `.kbpack.zip`. The application's repository catalog links here, so its existing import URL remains usable.
 
+## Update
+
+For a GitHub installation, open **Extensions → Knowledge → Check for updates**, then choose **Update to …**. The app checks this repository's default branch and installs the exact commit found during that check. New Goals use the enabled new version; existing Goals retain their pinned documents, methods, networks, and cross-package references. Disabled packs stay disabled after updating.
+
+ZIP imports remain local copies. Import a new ZIP to add its version, then enable the copy you want to use. Content updates do not require a desktop release.
+
 ## Knowledge
 
 Red and blue keep separate procedures and exchange evidence through related methods. Shared analysis methods have one source; `both` retrieves the relevant red, blue, and shared content.
